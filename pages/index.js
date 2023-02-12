@@ -39,7 +39,7 @@ export default function Home() {
         <div className='max-w-[600px] flex'>
           <div className='pr-3 group'>
             <button className='relative parent'>
-              <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1/75 to-candy2/75 px-5 py-[12px] font-bold text-white">
+              <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white">
                 Add To Server &rarr;
               </div>
               <div className="child top-0 bottom-0 right-0 left-0 absolute inset-0 h-full w-full max-w-0 rounded-full ring-white transition-all duration-1000 group-hover:inline group-hover:max-w-full group-hover:ring-2 z-0"></div>
