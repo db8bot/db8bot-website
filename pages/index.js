@@ -39,16 +39,16 @@ export default function Home() {
         <div className='max-w-[600px] flex'>
           <div className='pr-3 group'>
             <button className='relative parent'>
-              <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white">
+              <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white shadow-lg shadow-blue-500/50 drop-shadow-xl">
                 Add To Server &rarr;
               </div>
-              <div className="child top-0 bottom-0 right-0 left-0 absolute inset-0 h-full w-full max-w-0 rounded-full ring-white transition-all duration-1000 group-hover:inline group-hover:max-w-full group-hover:ring-2 z-0"></div>
+              {/* <div className="child top-0 bottom-0 right-0 left-0 absolute inset-0 h-full w-full max-w-0 rounded-full ring-white transition-all duration-1000 group-hover:inline group-hover:max-w-full group-hover:ring-2 z-0"></div> */}
             </button>
           </div>
 
           <div className='pl-3'>
-            <button className='rounded-full px-5 py-[12px] bg-btnLearnMore'>
-              <div className='text-white font-bold'>
+            <button className='rounded-full px-5 py-[12px] bg-white'>
+              <div className='text-black font-bold'>
                 Learn More
               </div>
             </button>
@@ -57,18 +57,28 @@ export default function Home() {
       </div>
 
       {/* widgetbot */}
-      <div className='pt-48 pb-10'>
+      <div className='md:pt-20 lg:pt-28 xl:pt-32 2xl:pt-48 pb-20'>
 
         <div className="relative group flex justify-center">
-          <div className='absolute w-4/6 h-[700px]'>
+          <div className='absolute 2xl:w-4/6 w-5/6 h-[700px]'>
             <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 blur-3xl -inset-3 opacity-80 group-hover:opacity-100 transition duration-1000 group-hover:duration-300"></div>
           </div>
           {client && <WidgetBot
             server='1072951238905311392'
             channel='1072951239446368288'
-            className='w-4/6 h-[700px] relative'
+            className='2xl:w-4/6 w-5/6 h-[700px] relative'
           />}
         </div>
+      </div>
+
+      {/* stats + user spotlight */}
+      <div className='bg-black py-10'>
+        <span className='text-white text-center capitalize font-bold text-lg'>
+          you are in good company
+        </span>
+        <span className='text-gray-500 text-center capitalize font-bold'>
+            increasing access & trusted by thousands daily
+        </span>
       </div>
 
     </div>
