@@ -180,11 +180,18 @@ export default function Home() {
             <div className='py-10'>
               <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
                 <div className='py-14 pr-14 flex'>
-                  <div className='flex flex-col'>
+                  <div className='flex flex-col drop-shadow-xl'>
                     <Image
                       src='/demo2v2.png'
                       height='1500'
-                      width='1300'
+                      width='1500'
+                      className='rounded-tr-md rounded-br-md pb-4'
+                    />
+                    <Image
+                      src='/demo21v1.png'
+                      height='500'
+                      width='1000'
+                      className='rounded-tr-md rounded-br-md'
                     />
                   </div>
 
