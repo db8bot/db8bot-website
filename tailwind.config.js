@@ -17,6 +17,10 @@ module.exports = {
         'rosered': '#BC3455',
         'unicorn1': '#FFCC33',
         'unicorn2': '#E233FF',
+        'water1': '#2F80ED',
+        'water2': '#B2FFDA',
+        'melon1': '#D6FF7F',
+        'melon2': '#00B3CC'
       },
       animation: {
         'fade': 'fade ease 3s'

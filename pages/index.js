@@ -1,15 +1,32 @@
+// TODO: https://play.tailwindcss.com/8QiuMQz6X2 - btn gradient flare
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import { RiCharacterRecognitionLine, RiDoubleQuotesL, RiEraserLine } from 'react-icons/ri'
+import { MdOutlineImagesearchRoller } from 'react-icons/md'
+import { SiReact, SiTailwindcss, SiNextdotjs, SiVercel, SiCloudflare } from 'react-icons/si'
 import { useEffect, useRef, useState } from 'react'
 import WidgetBot from '@widgetbot/react-embed'
+import CountUp, { useCountUp } from 'react-countup'
+import ScrollTrigger from 'react-scroll-trigger'
 
 export default function Home() {
   const [client, setClient] = useState(false)
   useEffect(() => setClient(true), [])
+
+  const [counterOn, setCounterOn] = useState(false)
+
+
   return (
     <div>
+      <Head>
+        <title>Home | db8bot</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="theme-color" content="#ffffff" />
+      </Head>
       <div className='py-5 px-[25px] min-h-screen bg-bgBlack flex flex-col'>
         <div className='md:h-12 lg:h-28 xl:32' />
 
@@ -72,91 +89,90 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Feature Spotlight 1 */}
-
-        <div className='py-10'>
-          <div className='text-center font-bold text-5xl'>
-            <span className='text-white'>Software that</span>
-            <span className='bg-clip-text bg-gradient-to-r from-nebula1 to-nebula2 text-transparent'> accelerates </span>
-            <span className='text-white'>your research.</span>
-          </div>
-          <div className='text-center font-bold text-xl pt-2'>
-            <span className='text-white'>More</span>
-            <span className='text-gray-400'> than an academic database.</span>
-          </div>
-        </div>
-
         <div className='px-48'>
           {/* container box with different color of shade in the box */}
-          {/* "the ultimateresearch assistant | incresing access while being faster than academic databases" */}
-          <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
-            {/* inner container */}
-            <div className='py-14 pl-14 flex'>
-              <div className='flex flex-col pr-8 justify-center'>
-                {/* cmd title */}
-                <div className='font-bold'>
-                  <div>
-                    <span className='text-nebula2 text-3xl'>/</span>
-                    <span className='text-white text-2xl'>get</span>
-                  </div>
-                  <div>
-                    <span className='text-nebula2 text-3xl'>/</span>
-                    <span className='text-white text-2xl'>getbook</span>
-                  </div>
-                </div>
-
-                {/* cmd subtitle */}
-                <div className='pt-4 text-white font-bold'>
-                  <span className='text-xl'>Search, Resolve, Access, Cite — </span>
-                  <span className='text-xl decoration underline decoration-orangewheel decoration-4'>All in one.</span>
-                </div>
-
-                {/* cmd details */}
-                {/* 100mil records, doi resolve, pdf + direct access, bib text*/}
-                <div className='pt-14 text-white'>
-                  <div className='text-base pb-2'>
-                    <span>🔍 </span>
-                    <span className='font-bold'>Search </span>
-                    <span>from </span>
-                    {/* on hover: (Google Scholar, arXiv, Semantic Scholar, SSRN) */}
-                    <span className='decoration underline decoration-dotted decoration-orangewheel' title='Google Scholar, arXiv, Semantic Scholar, SSRN, Sci-Hub, Library Genesis'>100 million+</span>
-                    <span> journals, articles & books.</span>
-                  </div>
-                  <div className='text-base pb-2'>
-                    <span>🧩 </span>
-                    <span className='font-bold'>Resolve & Unlock </span>
-                    <span>any DOI instantly. No more fuss with logins.</span>
-                  </div>
-                  <div className='text-base pb-2'>
-                    <span>📃 </span>
-                    <span className='font-bold'>Access</span>
-                    <span> articles via a downloadable PDF copy or the source URL.</span>
-                  </div>
-                  <div className='text-base pb-2'>
-                    {/* alt 🔖  */}
-                    <span>📑 </span>
-                    <span className='font-bold'>Cite & Record</span>
-                    <span> your research from the built-in article metadata.</span>
-                  </div>
-                </div>
+          {/* Feature Spotlight 1 */}
+          <div className='py-10'>
+            <div className='py-10'>
+              <div className='text-center font-bold text-5xl'>
+                <span className='text-white'>Software that</span>
+                <span className='bg-clip-text bg-gradient-to-r from-nebula1 to-nebula2 text-transparent'> accelerates </span>
+                <span className='text-white'>your research.</span>
               </div>
-
-              <div className='flex overflow-hidden drop-shadow-xl'>
-                <Image
-                  src='/demo1v2.png'
-                  width='700'
-                  height='1588'
-                  className='rounded-tl-md rounded-bl-md'
-                />
+              <div className='text-center font-bold text-xl pt-2'>
+                <span className='text-white'>More</span>
+                <span className='text-gray-400'> than an academic database.</span>
               </div>
             </div>
-            {/* image */}
+            {/* "the ultimateresearch assistant | incresing access while being faster than academic databases" */}
+            <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
+              {/* inner container */}
+              <div className='py-14 pl-14 flex'>
+                <div className='flex flex-col pr-8 justify-center'>
+                  {/* cmd title */}
+                  <div className='font-bold'>
+                    <div>
+                      <span className='text-nebula2 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>get</span>
+                    </div>
+                    <div>
+                      <span className='text-nebula2 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>getbook</span>
+                    </div>
+                  </div>
 
+                  {/* cmd subtitle */}
+                  <div className='pt-4 text-white font-bold'>
+                    <span className='text-xl'>Search, Resolve, Access, Cite — </span>
+                    <span className='text-xl decoration underline decoration-orangewheel decoration-4'>All in one.</span>
+                  </div>
+
+                  {/* cmd details */}
+                  {/* 100mil records, doi resolve, pdf + direct access, bib text*/}
+                  <div className='pt-14 text-white'>
+                    <div className='text-base pb-2'>
+                      <span>🔍 </span>
+                      <span className='font-bold'>Search </span>
+                      <span>from </span>
+                      {/* on hover: (Google Scholar, arXiv, Semantic Scholar, SSRN) */}
+                      <span className='decoration underline decoration-dotted decoration-orangewheel' title='Google Scholar, arXiv, Semantic Scholar, SSRN, Sci-Hub, Library Genesis'>100 million+</span>
+                      <span> journals, articles & books.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>🧩 </span>
+                      <span className='font-bold'>Resolve & Unlock </span>
+                      <span>any DOI instantly. No more fuss with logins.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>📃 </span>
+                      <span className='font-bold'>Access</span>
+                      <span> articles via a downloadable PDF copy or the source URL.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      {/* alt 🔖  */}
+                      <span>📑 </span>
+                      <span className='font-bold'>Cite & Record</span>
+                      <span> your research from the built-in article metadata.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className='flex overflow-hidden drop-shadow-xl'>
+                  {/* image */}
+                  <Image
+                    src='/demo1v2.png'
+                    width='700'
+                    height='1588'
+                    className='rounded-tl-md rounded-bl-md'
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* feature spotlight 2 */}
 
-          <div className='pb-10 pt-20'>
+          <div className='py-10'>
             <div className='grid gap-4 grid-cols-4 grid-rows-1'>
               <div className='text-left font-bold text-5xl col-span-3'>
                 <div>
@@ -177,22 +193,26 @@ export default function Home() {
               </div>
             </div>
 
-            <div className='py-10'>
+            <div className='pt-10'>
               <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
                 <div className='py-14 pr-14 flex'>
                   <div className='flex flex-col drop-shadow-xl'>
-                    <Image
-                      src='/demo2v2.png'
-                      height='1500'
-                      width='1500'
-                      className='rounded-tr-md rounded-br-md pb-4'
-                    />
-                    <Image
-                      src='/demo21v1.png'
-                      height='500'
-                      width='1000'
-                      className='rounded-tr-md rounded-br-md'
-                    />
+                    <div className='pb-4'>
+                      <Image
+                        src='/demo2v2.png'
+                        height='1500'
+                        width='1500'
+                        className='rounded-tr-md rounded-br-md'
+                      />
+                    </div>
+                    <div>
+                      <Image
+                        src='/demo21v1.png'
+                        height='500'
+                        width='1000'
+                        className='rounded-tr-md rounded-br-md'
+                      />
+                    </div>
                   </div>
 
                   <div className='flex'>
@@ -253,23 +273,520 @@ export default function Home() {
 
           </div>
 
+          {/* feature spotlight 3 */}
+          {/* Not on Tabroom? _No problem._ */}
+          <div className='py-10'>
+            <div>
+              <div className='text-center font-bold text-5xl'>
+                <div>
+                  <span className='text-white'>Not on Tabroom? </span>
+                  <span className='bg-clip-text bg-gradient-to-r from-water1 to-water2 text-transparent'>No Problem</span>
+                  <span className='text-white'>.</span>
+                </div>
+              </div>
+              <div className='text-center font-bold text-xl pt-2'>
+                <span className='text-gray-400'>Built-in tracking for </span>
+                <span className='text-white'>any</span>
+                <span className='text-gray-400'> debate.</span>
+              </div>
+            </div>
+
+            <div className='pt-10'>
+              <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
+                <div className='p-14'>
+                  {/* cmd titles */}
+                  <div className='font-bold text-center'>
+                    <div>
+                      <span className='text-water1 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>startround</span>
+                    </div>
+                    <div>
+                      <span className='text-water1 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>roundstatus</span>
+                    </div>
+                    <div>
+                      <span className='text-water1 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>setspeech</span>
+                    </div>
+                    <div>
+                      <span className='text-water1 text-3xl'>/</span>
+                      <span className='text-white text-2xl'>endround</span>
+                    </div>
+                  </div>
+                  {/* cmd subtitles */}
+                  <div className='pt-4 text-white text-center font-bold'>
+                    <span className='text-xl'>Create, View, Update, End — </span>
+                    <span className='text-xl decoration underline decoration-orangewheel decoration-4'>For any type of debate; All in one place.</span>
+                  </div>
+                  {/* cmd details */}
+                  <div className='pt-14 text-white text-center'>
+                    <div className='text-base pb-2'>
+                      <span>▶ </span>
+                      <span className='font-bold'>Create</span>
+                      <span> a round.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>👓 </span>
+                      <span className='font-bold'>View</span>
+                      <span> the status of all rounds in your server.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>📝 </span>
+                      <span className='font-bold'>Update & Track</span>
+                      <span> the current speech for a round.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>⏹ </span>
+                      <span className='font-bold'>End</span>
+                      <span> a round & enter a decision.</span>
+                    </div>
+                    <div className='text-base pb-2'>
+                      <span>🏷️ </span>
+                      <span className='font-bold'>Automatically Assign</span>
+                      <span> "Currently Debating" & "Currently Judging" roles.</span>
+                    </div>
+                  </div>
+                  {/* image */}
+                  <div className='pt-4 drop-shadow-xl'>
+                    <Image
+                      src='/demo3v2.png'
+                      height='1000'
+                      width='1200'
+                      className='rounded-md'
+                    />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* feature spotlight 4 */}
+          {/* Other tools to make your life _easy._*/}
+
+          <div className='py-10'>
+            <div className='flex pt-10'>
+
+
+
+
+              <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
+                <div className='py-14 pr-14 drop-shadow-xl'>
+                  <Image
+                    src='/demo4v2.png'
+                    height='2000'
+                    width='1000'
+                    className='rounded-tr-md rounded-br-md'
+                  />
+                </div>
+              </div>
+
+
+
+              <div className='flex flex-col items-center justify-start'>
+
+                <div className='self-start text-center font-bold text-5xl'>
+                  <span className='text-white'>Other tools to make online debate & learning </span>
+                  <span className='bg-clip-text bg-gradient-to-r from-melon1 to-melon2 text-transparent'>easy</span>
+                  <span className='text-white'>.</span>
+                </div>
+
+                <div className='flex flex-1 items-center justify-center pl-8'>
+                  <div>
+                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md divide-y-2 divide-x-2'>
+                      <div className='p-12 text-center items-center'>
+                        <div>
+                          <RiCharacterRecognitionLine
+                            className='text-9xl m-auto'
+                          />
+                          <span>Optical Character Recognition (OCR)</span>
+                        </div>
+                      </div>
+
+                      <div className='p-12 text-center items-center'>
+                        <RiDoubleQuotesL
+                          className='text-9xl m-auto'
+                        />
+                        <span>Quotes from Baudrillard, Bataille, Agamben, Foucault & more</span>
+                      </div>
+
+                      <div className='p-12 text-center items-center'>
+                        <MdOutlineImagesearchRoller
+                          className='text-9xl m-auto'
+                        />
+                        <span>Add white background to Rich text copied from Microsoft Word</span>
+                      </div>
+
+                      <div className='p-12 text-center items-center'>
+                        <RiEraserLine
+                          className='text-9xl m-auto'
+                        />
+                        <span>Bulk purge messages</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
         </div>
         {/* dev placeholder */}
-        <div className='h-[300px]'></div>
+        {/* <div className='h-[300px]'></div> */}
       </div>
 
 
-      {/* Not on Tabroom? _No problem._ */}
-      {/* Other tools to make your life _easy._*/}
       {/* stats + user spotlight */}
-      {/* <div className='bg-black py-10'>
-        <p className='text-white text-center font-bold text-lg'>
-          Helping Thousands of Students & Scholars Worldwide
-        </p>
-        <p className='text-gray-500 text-center capitalize font-bold'>
+      <div className='bg-black py-10'>
+        <div className='text-center'>
+          <span className='text-white text-3xl'>You are in good hands</span>
+        </div>
+        <div className='text-center'>
+          <span className='text-gray-400 text-lg'>Increasing academic access for thousands across the world.</span>
+        </div>
 
-        </p>
-      </div> */}
+        <div className='px-48 py-4'>
+          <div className='grid grid-cols-3 grid-rows-1 text-white'>
+
+            {/* <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}> */}
+
+            <div className='text-center font-bold text-3xl'>
+              <ScrollTrigger onEnter={() => setCounterOn(true)}>
+              </ScrollTrigger>
+              <span>
+                {counterOn && <CountUp start={0} end={950} suffix='+' duration={2} delay={0} />}
+              </span>
+              <span> Communities</span>
+            </div>
+            <div className='text-center'>
+
+              <div className='font-bold text-3xl'>
+                <span>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
+                </span>
+                <span> Active Users</span>
+              </div>
+              <div>
+                <span>{counterOn && <CountUp start={0} end={600000} suffix='+' separator=',' duration={2} delay={0} />}
+                </span>
+                <span> Cumulative Users</span>
+              </div>
+
+            </div>
+            <div className='text-center font-bold text-3xl'>
+
+              <span>{counterOn && <CountUp start={0} end={20} suffix='+' duration={2} delay={0} />}
+              </span>
+              <span> Countries</span>
+
+            </div>
+          </div>
+          {/* logo spotlights */}
+
+          <div className='pt-4'>
+            <div class="relative flex py-5 items-center">
+              <div class="flex-grow border-t border-gray-400"></div>
+              <span class="flex-shrink mx-4 text-gray-400">Select Debate Communities</span>
+              <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+            {/* section 1 1 */}
+            <div className='grid grid-cols-5 grid-rows-2'>
+              <a href='https://www.kentuckydebate.com/' target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/UK_Debate.png'
+                    height='192'
+                    width='192'
+                    className='grayscale invert'
+                  />
+                </div>
+              </a>
+
+              <a href="https://uh.edu/honors/Programs-Minors/co-curricular-programs/debate/policy-debate.php" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/UH_Debate.png'
+                    height='192'
+                    width='192'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.fultonschools.org/alpharettahs" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Alpharetta_Debate.png'
+                    height='128'
+                    width='128'
+                    className='grayscale invert'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.pinecrest.edu/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/PineCrest_Debate.png'
+                    height='128'
+                    width='128'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://pvphs.pvpusd.net/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Penisula_Debate.png'
+                    height='192'
+                    width='192'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.damien-hs.edu/apps/pages/debateoverview" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Damien_Debate.jpg'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://bsd405.org/interlake/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Interlake_Debate.png'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.smtexas.org/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/StMarks_Debate.png'
+                    height='128'
+                    width='128'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.ddidebate.org/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/DDI_Debate.jpg'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://michigandebate.com/institutes/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/UMICH_Debate.png'
+                    height='128'
+                    width='128'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+
+          <div className='pt-2'>
+            <div class="relative flex py-5 items-center">
+              <div class="flex-grow border-t border-gray-400"></div>
+              <span class="flex-shrink mx-4 text-gray-400">Select Academic Communities</span>
+              <div class="flex-grow border-t border-gray-400"></div>
+            </div>
+            <div className='grid grid-cols-5 grid-rows-2'>
+              <a href="https://dornsife.usc.edu/chemistry/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/USC_Chem.jpg'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.csi.cuny.edu/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/College_of_Staten_Island.png'
+                    height='128'
+                    width='128'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.pepperdine.edu/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Pepperdine_University.png'
+                    height='192'
+                    width='192'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://neuro.udp.cl/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/CENHN.png'
+                    height='256'
+                    width='266'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://lirauni.ac.ug/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Lira_U.png'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.ust-legazpi.edu.ph/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/UST-Legazpi.png'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www2.upmin.edu.ph/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Unibersidad_ng_Pilipinas_Mindanao.png'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+
+              <a href="https://twitter.com/xujpia" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/JuniorIAXU.jpg'
+                    height='192'
+                    width='192'
+                    className='grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://neust.edu.ph/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/Nueva_Ecija_University.jpg'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://www.pup.edu.ph/ce/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/PH_Poly.png'
+                    height='192'
+                    width='192'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* questions? */}
+      <div className='bg-bgBlack'>
+        <div className='p-14'>
+          <div className='text-center '>
+            <span className='font-bold text-transparent bg-clip-text text-6xl bg-gradient-to-r from-candy1 to-candy2'>Questions?</span>
+          </div>
+          <div className='pt-12 flex flex-col items-center'>
+            <div className='max-w-[600px] flex'>
+              <div className='pr-3 group'>
+                <button>
+                  <div className="rounded-full px-5 py-[12px] bg-white hover:shadow-lg hover:shadow-white/50 hover:drop-shadow-xl transition-all duration-500">
+                    <div className='text-black font-bold '>
+                      Join the support server
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+              <div className='pl-3'>
+                <button>
+                  <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:drop-shadow-xl transition-all duration-500">
+                    Try it out! &rarr;
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+
+      <div className='bg-bgBlack'>
+
+        <div className='text-center text-white'>
+          <p>
+            &copy; 2023 Jim Fang, db8bot
+          </p>
+          <p>
+            The db8bot project is open-sourced under the MIT license on <a href="https://github.com/airfusion45/db8bot" target='_blank' className='underline decoration-dashed decoration-white'>GitHub</a>.
+          </p>
+          <p>
+            Please see db8bot's GitHub Readme for legal information & our privacy policy.
+          </p>
+          <div className='flex justify-center'>
+            <p className='mr-1'>Site Powered By</p>
+            <SiReact className="text-2xl mr-2" title='React' />
+            <SiTailwindcss className="text-2xl mr-2" title='Tailwind CSS' />
+            <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
+            <SiVercel className="text-2xl mr-2" title='Vercel' />
+            <SiCloudflare className="text-2xl" title='Cloudflare' />
+          </div>
+          <p className='pb-2'>
+            Emergency Webmaster Contact: <a href="mailto:jim@airfusion.dev" className="underline decoration-dashed">jim@airfusion.dev</a>
+          </p>
+        </div>
+      </div>
 
 
     </div>
