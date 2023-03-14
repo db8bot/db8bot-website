@@ -758,27 +758,18 @@ export default function Home() {
 
       {/* questions? */}
       <div className='bg-bgBlack'>
-        <div className='py-4 md:p-14'>
+        <div className='py-4 px-2 md:p-14'>
           <div className='text-center'>
             <span className='font-bold text-transparent bg-clip-text text-6xl bg-gradient-to-r from-candy1 to-candy2'>Questions?</span>
           </div>
           <div className='pt-6 md:pt-12 flex flex-col items-center'>
             <div className='max-w-[600px] flex'>
               <div className='pr-3 group'>
-                <a href="#learnMoreStart">
+                <a href="https://discord.gg/rEQc7C7">
                   <button className='rounded-md px-6 py-[14px] bg-white hover:bg-bgBlack transition-all duration-500 border inset-0 text-black hover:text-white font-bold'>
-                    {client && <Link
-                      activeclassName="active"
-                      to="learnMoreStart"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={1000}
-                    >
                       <div>
-                        Learn More
+                        Join the Support Server
                       </div>
-                    </Link>}
                   </button>
                 </a>
               </div>
@@ -788,7 +779,7 @@ export default function Home() {
                   <span className="w-full h-full bg-gradient-to-br from-candy1 via-candymid to-candy2 group-hover:from-candy1 group-hover:via-candymid group-hover:to-candy2 absolute"></span>
                   <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-[600ms]">
                     <div className='text-center'>
-                      <span className="relative text-white text-center">Add To Server &rarr;</span>
+                      <span className="relative text-white text-center">Try it out!</span>
                     </div>
                   </span>
                 </a>
@@ -804,10 +795,10 @@ export default function Home() {
 
         <div className='text-center text-white'>
           <p>
-            &copy; 2023 Jim Fang, db8bot
+            &copy; 2023 db8bot
           </p>
           <p>
-            The db8bot project is open-sourced under the MIT license on <a href="https://github.com/airfusion45/db8bot" target='_blank' className='underline decoration-dashed decoration-white'>GitHub</a>.
+            The db8bot project is open-sourced under the MIT license on <a href="https://github.com/db8bot" target='_blank' className='underline decoration-dashed decoration-white'>GitHub</a>.
           </p>
           <p>
             Please see db8bot's GitHub Readme for legal information & our privacy policy.
