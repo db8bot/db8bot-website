@@ -1,5 +1,6 @@
 // TODO: https://play.tailwindcss.com/8QiuMQz6X2 - btn gradient flare
 import Head from 'next/head'
+import { Link } from "react-scroll"
 import Image from 'next/image'
 import { RiCharacterRecognitionLine, RiDoubleQuotesL, RiEraserLine } from 'react-icons/ri'
 import { MdOutlineImagesearchRoller } from 'react-icons/md'
@@ -17,7 +18,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Head>
         <title>Home | db8bot</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -56,26 +57,50 @@ export default function Home() {
         <div className='flex flex-col items-center pt-2'>
           <div className='max-w-[600px] flex'>
             <div className='pr-3 group'>
-              <button className='relative parent'>
-                <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:drop-shadow-xl transition-all duration-500">
-                  Add To Server &rarr;
-                </div>
-                {/* <div className="child top-0 bottom-0 right-0 left-0 absolute inset-0 h-full w-full max-w-0 rounded-full ring-white transition-all duration-1000 group-hover:inline group-hover:max-w-full group-hover:ring-2 z-0"></div> */}
-              </button>
+              {/* <button className='relative parent'> */}
+              {/* <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:drop-shadow-xl transition-all duration-500"> */}
+              {/* <div className="z-10 whitespace-nowrap rounded-md bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white transition-all duration-500"> */}
+              {/* Add To Server &rarr; */}
+              {/* </div> */}
+              {/* <div className="child top-0 bottom-0 right-0 left-0 absolute inset-0 h-full w-full max-w-0 rounded-full ring-white transition-all duration-1000 group-hover:inline group-hover:max-w-full group-hover:ring-2 z-0"></div> */}
+              {/* </button> */}
+
+              <a href="https://discord.com/oauth2/authorize?client_id=689368779305779204&permissions=310647056497&scope=bot%20applications.commands" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                <span className="w-full h-full bg-gradient-to-br from-candy1 via-candymid to-candy2 group-hover:from-candy1 group-hover:via-candymid group-hover:to-candy2 absolute"></span>
+                <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-[600ms]">
+                  <div className='text-center'>
+                    <span className="relative font-bold text-white">Add To Server &rarr;</span>
+                  </div>
+                </span>
+              </a>
+
             </div>
 
             <div className='pl-3'>
-              <button className='rounded-full px-5 py-[12px] bg-white hover:shadow-lg hover:shadow-white/50 hover:drop-shadow-xl transition-all duration-500'>
-                <div className='text-black font-bold '>
-                  Learn More
-                </div>
-              </button>
+              {/* <button className='rounded-full px-5 py-[12px] bg-white hover:shadow-lg hover:shadow-white/50 hover:drop-shadow-xl transition-all duration-500'> */}
+              <a href="#learnMoreStart">
+                <button className='rounded-md px-6 py-[14px] bg-white hover:bg-bgBlack transition-all duration-500 border inset-0 text-black hover:text-white font-bold'>
+                  {client && <Link
+                    activeclassName="active"
+                    to="learnMoreStart"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    <div>
+                      Learn More
+                    </div>
+                  </Link>}
+                </button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* widgetbot */}
-        <div className='md:pt-20 lg:pt-28 xl:pt-32 2xl:pt-48 pb-20'>
+        {/* md:pt-20 lg:pt-28 xl:pt-32 2xl:pt-48 */}
+        <div className='pt-20 pb-20'>
 
           <div className="relative group flex justify-center">
             <div className='absolute 2xl:w-4/6 w-5/6 h-[700px]'>
@@ -89,12 +114,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='px-48'>
+        <div className='lg:px-48'>
           {/* container box with different color of shade in the box */}
           {/* Feature Spotlight 1 */}
           <div className='py-10'>
             <div className='py-10'>
-              <div className='text-center font-bold text-5xl'>
+              <div className='text-center font-bold text-5xl' id='learnMoreStart'>
                 <span className='text-white'>Software that</span>
                 <span className='bg-clip-text bg-gradient-to-r from-nebula1 to-nebula2 text-transparent'> accelerates </span>
                 <span className='text-white'>your research.</span>
@@ -157,7 +182,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className='flex overflow-hidden drop-shadow-xl'>
+                <div className='md:flex md:overflow-hidden md:drop-shadow-xl hidden'>
                   {/* image */}
                   <Image
                     src='/demo1v2.png'
@@ -183,7 +208,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div>
+              <div className='hidden md:block'>
                 <Image
                   src='/spotlight2v1.png'
                   width='500'
@@ -197,7 +222,7 @@ export default function Home() {
               <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
                 <div className='py-14 pr-14 flex'>
                   <div className='flex flex-col drop-shadow-xl'>
-                    <div className='pb-4'>
+                    <div className='md:pb-4 md:block hidden'>
                       <Image
                         src='/demo2v2.png'
                         height='1500'
@@ -205,7 +230,7 @@ export default function Home() {
                         className='rounded-tr-md rounded-br-md'
                       />
                     </div>
-                    <div>
+                    <div className='hidden md:block'>
                       <Image
                         src='/demo21v1.png'
                         height='500'
@@ -347,7 +372,7 @@ export default function Home() {
                     </div>
                   </div>
                   {/* image */}
-                  <div className='pt-4 drop-shadow-xl'>
+                  <div className='md:pt-4 md:drop-shadow-xl md:block hidden'>
                     <Image
                       src='/demo3v2.png'
                       height='1000'
@@ -371,7 +396,7 @@ export default function Home() {
 
 
               <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
-                <div className='py-14 pr-14 drop-shadow-xl'>
+                <div className='xl:py-14 xl:pr-14 xl:drop-shadow-xl xl:block hidden'>
                   <Image
                     src='/demo4v2.png'
                     height='2000'
@@ -391,35 +416,34 @@ export default function Home() {
                   <span className='text-white'>.</span>
                 </div>
 
-                <div className='flex flex-1 items-center justify-center pl-8'>
-                  <div>
-                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md divide-y-2 divide-x-2'>
-                      <div className='p-12 text-center items-center'>
-                        <div>
-                          <RiCharacterRecognitionLine
-                            className='text-9xl m-auto'
-                          />
-                          <span>Optical Character Recognition (OCR)</span>
-                        </div>
+                <div className='flex flex-1 items-center justify-center md:pl-8 pt-6'>
+                  <div className='md:p-4'>
+                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md md:h-[500px] md:w-[500px] w-[320px] h-[340px]'>
+                      <div className='text-center items-center justify-center flex flex-col border-r border-b'>
+                        <RiCharacterRecognitionLine
+                          className='text-8xl md:text-9xl'
+                        />
+                        <span className='hidden md:block'>Optical Character Recognition (OCR)</span>
+                        <span className='md:hidden'>Optical Character Recognition</span>
                       </div>
 
-                      <div className='p-12 text-center items-center'>
+                      <div className='text-center items-center justify-center flex flex-col border-b'>
                         <RiDoubleQuotesL
-                          className='text-9xl m-auto'
+                          className='text-7xl md:text-9xl'
                         />
-                        <span>Quotes from Baudrillard, Bataille, Agamben, Foucault & more</span>
+                        <span className='px-2'>Quotes from Baudrillard, Bataille, Agamben, Foucault & more</span>
                       </div>
 
-                      <div className='p-12 text-center items-center'>
+                      <div className='text-center items-center justify-center flex flex-col border-r'>
                         <MdOutlineImagesearchRoller
-                          className='text-9xl m-auto'
+                          className='text-7xl md:text-9xl'
                         />
-                        <span>Add white background to Rich text copied from Microsoft Word</span>
+                        <span className='px-2'>Add white background to Rich text copied from Microsoft Word</span>
                       </div>
 
-                      <div className='p-12 text-center items-center'>
+                      <div className='text-center items-center justify-center flex flex-col'>
                         <RiEraserLine
-                          className='text-9xl m-auto'
+                          className='text-7xl md:text-9xl'
                         />
                         <span>Bulk purge messages</span>
                       </div>
@@ -447,34 +471,34 @@ export default function Home() {
           <span className='text-gray-400 text-lg'>Increasing academic access for thousands across the world.</span>
         </div>
 
-        <div className='px-48 py-4'>
+        <div className='lg:px-48 lg:py-4 px-2'>
           <div className='grid grid-cols-3 grid-rows-1 text-white'>
 
             {/* <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}> */}
 
-            <div className='text-center font-bold text-3xl'>
+            <div className='text-center font-bold'>
               <ScrollTrigger onEnter={() => setCounterOn(true)}>
               </ScrollTrigger>
-              <span>
-                {counterOn && <CountUp start={0} end={950} suffix='+' duration={2} delay={0} />}
-              </span>
-              <span> Communities</span>
+              <p className='text-2xl md:text-3xl'>
+                {counterOn && <CountUp start={0} end={980} suffix='+' duration={2} delay={0} />}
+              </p>
+              <p className='text-lg sm:text-2xl md:text-3xl'> Communities</p>
             </div>
             <div className='text-center'>
 
-              <div className='font-bold text-3xl'>
-                <span>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
-                </span>
-                <span> Active Users</span>
+              <div className='font-bold text-2xl md:text-3xl'>
+                <p>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
+                </p>
+                <p> Active Users</p>
               </div>
               <div>
-                <span>{counterOn && <CountUp start={0} end={600000} suffix='+' separator=',' duration={2} delay={0} />}
-                </span>
-                <span> Cumulative Users</span>
+                <p>{counterOn && <CountUp start={0} end={650000} suffix='+' separator=',' duration={2} delay={0} />}
+                </p>
+                <p> Cumulative Users</p>
               </div>
 
             </div>
-            <div className='text-center font-bold text-3xl'>
+            <div className='text-center font-bold text-2xl md:text-3xl'>
 
               <span>{counterOn && <CountUp start={0} end={20} suffix='+' duration={2} delay={0} />}
               </span>
@@ -484,14 +508,14 @@ export default function Home() {
           </div>
           {/* logo spotlights */}
 
-          <div className='pt-4'>
-            <div class="relative flex py-5 items-center">
-              <div class="flex-grow border-t border-gray-400"></div>
-              <span class="flex-shrink mx-4 text-gray-400">Select Debate Communities</span>
-              <div class="flex-grow border-t border-gray-400"></div>
+          <div className='md:pt-4 px-2 md:px-0'>
+            <div className="relative flex py-5 items-center">
+              <div className="flex-grow border-t border-gray-400"></div>
+              <span className="flex-shrink mx-4 text-gray-400">Select Debate Communities</span>
+              <div className="flex-grow border-t border-gray-400"></div>
             </div>
             {/* section 1 1 */}
-            <div className='grid grid-cols-5 grid-rows-2'>
+            <div className='grid grid-cols-5 grid-rows-2 px-2 md:px-0'>
               <a href='https://www.kentuckydebate.com/' target='_blank' className='m-auto'>
                 <div>
                   <Image
@@ -606,13 +630,13 @@ export default function Home() {
           </div>
 
 
-          <div className='pt-2'>
-            <div class="relative flex py-5 items-center">
-              <div class="flex-grow border-t border-gray-400"></div>
-              <span class="flex-shrink mx-4 text-gray-400">Select Academic Communities</span>
-              <div class="flex-grow border-t border-gray-400"></div>
+          <div className='pt-2 px-2 md:px-0'>
+            <div className="relative flex py-5 items-center">
+              <div className="flex-grow border-t border-gray-400"></div>
+              <span className="flex-shrink mx-4 text-gray-400">Select Academic Communities</span>
+              <div className="flex-grow border-t border-gray-400"></div>
             </div>
-            <div className='grid grid-cols-5 grid-rows-2'>
+            <div className='grid grid-cols-5 grid-rows-2 px-2 md:px-0'>
               <a href="https://dornsife.usc.edu/chemistry/" target='_blank' className='m-auto'>
                 <div>
                   <Image
@@ -732,28 +756,40 @@ export default function Home() {
 
       {/* questions? */}
       <div className='bg-bgBlack'>
-        <div className='p-14'>
-          <div className='text-center '>
+        <div className='py-4 md:p-14'>
+          <div className='text-center'>
             <span className='font-bold text-transparent bg-clip-text text-6xl bg-gradient-to-r from-candy1 to-candy2'>Questions?</span>
           </div>
-          <div className='pt-12 flex flex-col items-center'>
+          <div className='pt-6 md:pt-12 flex flex-col items-center'>
             <div className='max-w-[600px] flex'>
               <div className='pr-3 group'>
-                <button>
-                  <div className="rounded-full px-5 py-[12px] bg-white hover:shadow-lg hover:shadow-white/50 hover:drop-shadow-xl transition-all duration-500">
-                    <div className='text-black font-bold '>
-                      Join the support server
-                    </div>
-                  </div>
-                </button>
+                <a href="#learnMoreStart">
+                  <button className='rounded-md px-6 py-[14px] bg-white hover:bg-bgBlack transition-all duration-500 border inset-0 text-black hover:text-white font-bold'>
+                    {client && <Link
+                      activeclassName="active"
+                      to="learnMoreStart"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={1000}
+                    >
+                      <div>
+                        Learn More
+                      </div>
+                    </Link>}
+                  </button>
+                </a>
               </div>
 
               <div className='pl-3'>
-                <button>
-                  <div className="z-10 whitespace-nowrap rounded-full bg-gradient-to-r from-candy1 to-candy2 px-5 py-[12px] font-bold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:drop-shadow-xl transition-all duration-500">
-                    Try it out! &rarr;
-                  </div>
-                </button>
+                <a href="https://discord.com/oauth2/authorize?client_id=689368779305779204&permissions=310647056497&scope=bot%20applications.commands" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md">
+                  <span className="w-full h-full bg-gradient-to-br from-candy1 via-candymid to-candy2 group-hover:from-candy1 group-hover:via-candymid group-hover:to-candy2 absolute"></span>
+                  <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-[600ms]">
+                    <div className='text-center'>
+                      <span className="relative text-white text-center">Add To Server &rarr;</span>
+                    </div>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -762,7 +798,7 @@ export default function Home() {
 
       {/* footer */}
 
-      <div className='bg-bgBlack'>
+      <div className='pt-6 md:pt-0 bg-bgBlack'>
 
         <div className='text-center text-white'>
           <p>
@@ -775,15 +811,25 @@ export default function Home() {
             Please see db8bot's GitHub Readme for legal information & our privacy policy.
           </p>
           <div className='flex justify-center'>
-            <p className='mr-1'>Site Powered By</p>
+            <p className='mr-1'>Site Built With</p>
             <SiReact className="text-2xl mr-2" title='React' />
             <SiTailwindcss className="text-2xl mr-2" title='Tailwind CSS' />
             <SiNextdotjs className="text-2xl mr-2" title='Next.js' />
-            <SiVercel className="text-2xl mr-2" title='Vercel' />
+            {/* <SiVercel className="text-2xl mr-2" title='Vercel' /> */}
             <SiCloudflare className="text-2xl" title='Cloudflare' />
           </div>
-          <p className='pb-2'>
-            Emergency Webmaster Contact: <a href="mailto:jim@airfusion.dev" className="underline decoration-dashed">jim@airfusion.dev</a>
+          <div className='flex justify-center'>
+            <a href="https://vercel.com/?utm_source=db8bot&utm_campaign=oss" target="_blank">
+              <Image
+                src='/vercel.svg'
+                width='212'
+                height='44'
+                className=''
+              />
+            </a>
+          </div>
+          <p className='pb-2 px-2'>
+            Emergency Webmaster Contact: <a href="mailto:jim@db8bot.app" className="underline decoration-dashed">jim@db8bot.app</a>
           </p>
         </div>
       </div>

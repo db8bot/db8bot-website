@@ -1,8 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# db8bot Website
+[![Powered by Vercel](./public/vercel.svg)](https://vercel.com/?utm_source=db8bot&utm_campaign=oss)
 
-## Getting Started
+Repository for db8bot's website built with [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/) on [Next.js](https://nextjs.org/). Hosted on [Vercel](https://vercel.com/) & managed using [Cloudflare](https://cloudflare.com). Repo bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-First, run the development server:
+Live site at [db8bot.app](https://db8bot.app)
+## Build your own copy on Vercel
+Fork this repo.
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=db8bot&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Build on Local Machine
+Clone the repo, then:
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,13 +30,9 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Contributors
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* *[AirFusion45](https://github.com/AirFusion45)* - Original Author
 
 ## Learn More
 
@@ -31,8 +43,19 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## License 
+This Project is licensed under MIT License - see the LICENSE.md file for more details. The main points of the MIT License are:
+  
+  * This code can be used commercially
+  * This code can be modified
+  * This code can be distributed
+  * This code can be used for private use
+  * This code has no Liability
+  * This code has no Warranty
+  * When using this code, credit must be given to the author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contact Me
+Feel free to contact me if you find bugs, license issues, missing credits, etc.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  * Please contact me here:
+    * Discord: AirFusion#5112

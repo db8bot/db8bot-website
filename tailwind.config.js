@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'bgBlack': '#131415',
         'candy1': '#CB5EEE',
+        'candymid': '#8BA0ED',
         'candy2': '#4BE1EC',
         'btnLearnMore': '#2E323D',
         'nebula1': '#6699FF',
