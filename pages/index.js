@@ -2,6 +2,7 @@
 import Head from 'next/head'
 import { Link } from "react-scroll"
 import Image from 'next/image'
+import { Analytics } from '@vercel/analytics/react';
 import { RiCharacterRecognitionLine, RiDoubleQuotesL, RiEraserLine } from 'react-icons/ri'
 import { MdOutlineImagesearchRoller } from 'react-icons/md'
 import { SiReact, SiTailwindcss, SiNextdotjs, SiVercel, SiCloudflare } from 'react-icons/si'
@@ -19,6 +20,7 @@ export default function Home() {
 
   return (
     <div className='overflow-hidden'>
+      <Analytics />
       <Head>
         <title>Home | db8bot</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
