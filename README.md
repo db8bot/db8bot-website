@@ -60,4 +60,5 @@ This Project is licensed under MIT License - see the LICENSE.md file for more de
 Feel free to contact me if you find bugs, license issues, missing credits, etc.
 
   * Please contact me here:
+    * Email: jim@db8bot.app
     * Discord: AirFusion#5112
