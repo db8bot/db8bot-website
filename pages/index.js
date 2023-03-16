@@ -466,7 +466,7 @@ export default function Home() {
       </div>
 
 
-      {/* stats + user spotlight */}
+      {/* stats + user spotlight*/}
       <div className='bg-black py-10'>
         <div className='text-center'>
           <span className='text-white text-3xl'>You are in good hands</span>
@@ -756,6 +756,29 @@ export default function Home() {
           </div>
         </div>
 
+      </div>
+
+      {/* supporting organizations */}
+      <div className='bg-black pt-10 pb-14 px-2'>
+        <div className='text-center'>
+          <span className='text-white text-3xl'>Supporting Organizations</span>
+        </div>
+        <div className='text-center'>
+          <span className='text-gray-400 text-lg'>Thank you for supporting our mission to make leanring acceessible to all.</span>
+          {/* We could not have done it without you. */}
+        </div>
+        <div className='pt-4'>
+          <a href="https://opencollective.com/db8bot" target='_blank'>
+            <div>
+              <Image
+                src='/sponsors/OSC.png'
+                height='189'
+                width='750'
+                className='m-auto'
+              />
+            </div>
+          </a>
+        </div>
       </div>
 
       {/* questions? */}
