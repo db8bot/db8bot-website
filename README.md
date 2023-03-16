@@ -1,6 +1,8 @@
 # db8bot Website
 [![Powered by Vercel](./public/vercel.svg)](https://vercel.com/?utm_source=db8bot&utm_campaign=oss)
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdb8bot%2Fdb8bot-website.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdb8bot%2Fdb8bot-website?ref=badge_large)
+
 Repository for db8bot's website built with [React](https://reactjs.org/) and [TailwindCSS](https://tailwindcss.com/) on [Next.js](https://nextjs.org/). Hosted on [Vercel](https://vercel.com/) & managed using [Cloudflare](https://cloudflare.com). Repo bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 Live site at [db8bot.app](https://db8bot.app)
