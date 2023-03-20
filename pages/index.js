@@ -380,7 +380,7 @@ export default function Home() {
                     <Image
                       src='/demo3v2.png'
                       height='1000'
-                      width='1200'
+                      width='1500'
                       className='rounded-md'
                     />
                   </div>
@@ -422,7 +422,7 @@ export default function Home() {
 
                 <div className='flex flex-1 items-center justify-center md:pl-8 pt-6'>
                   <div className='md:p-4'>
-                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md md:h-[500px] md:w-[500px] w-[320px] h-[340px]'>
+                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md md:h-[500px] md:w-[500px] w-[320px] h-[340px] lg:h-[600px] lg:w-[600px] xl:h-[700px] xl:w-[700px] 2xl:h-[750px] 2xl:w-[750px]'>
                       <div className='text-center items-center justify-center flex flex-col border-r border-b'>
                         <RiCharacterRecognitionLine
                           className='text-8xl md:text-9xl'
@@ -486,27 +486,28 @@ export default function Home() {
               <p className='text-2xl md:text-3xl'>
                 {counterOn && <CountUp start={0} end={980} suffix='+' duration={2} delay={0} />}
               </p>
-              <p className='text-lg sm:text-2xl md:text-3xl'> Communities</p>
+              <p className='text-lg sm:text-2xl md:text-3xl'>Communities</p>
             </div>
             <div className='text-center'>
 
               <div className='font-bold text-2xl md:text-3xl'>
                 <p>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
-                <p> Active Users</p>
+                <p>Active Users</p>
               </div>
               <div>
                 <p>{counterOn && <CountUp start={0} end={650000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
-                <p> Cumulative Users</p>
+                <p>Cumulative Users</p>
               </div>
 
             </div>
             <div className='text-center font-bold text-2xl md:text-3xl'>
-
-              <span>{counterOn && <CountUp start={0} end={20} suffix='+' duration={2} delay={0} />}
-              </span>
-              <span> Countries</span>
+              <div>
+                <p>{counterOn && <CountUp start={0} end={20} suffix='+' duration={2} delay={0} />}
+                </p>
+                <p>Countries</p>
+              </div>
 
             </div>
           </div>
@@ -764,7 +765,7 @@ export default function Home() {
           <span className='text-white text-3xl'>Supporting Organizations</span>
         </div>
         <div className='text-center'>
-          <span className='text-gray-400 text-lg'>Thank you for supporting our mission to make leanring acceessible to all.</span>
+          <span className='text-gray-400 text-lg'>Thank you for supporting our mission to make learning accessible to all.</span>
           {/* We could not have done it without you. */}
         </div>
         <div className='pt-4'>
