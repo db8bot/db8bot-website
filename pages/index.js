@@ -516,7 +516,7 @@ export default function Home() {
           <div className='md:pt-4 px-2 md:px-0'>
             <div className="relative flex py-5 items-center">
               <div className="flex-grow border-t border-gray-400"></div>
-              <span className="flex-shrink mx-4 text-gray-400">Select Debate Communities</span>
+              <span className="flex-shrink mx-4 text-gray-400">Select Debate Communities: Used by the people at</span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
             {/* section 1 1 */}
@@ -627,7 +627,7 @@ export default function Home() {
           <div className='pt-2 px-2 md:px-0'>
             <div className="relative flex py-5 items-center">
               <div className="flex-grow border-t border-gray-400"></div>
-              <span className="flex-shrink mx-4 text-gray-400">Select Academic Communities</span>
+              <span className="flex-shrink mx-4 text-gray-400">Select Academic Communities: Used by the people at</span>
               <div className="flex-grow border-t border-gray-400"></div>
             </div>
             <div className='grid grid-cols-5 grid-rows-2 px-2 md:px-0'>
@@ -745,7 +745,7 @@ export default function Home() {
             </div>
           </div>
           <div className='text-center pt-4'>
-            <span className='text-gray-400 text-lg'>Note: The organizations listed above represent a selection of groups that use db8bot. db8bot does not endorse or sponsor any of the above organizations or their products, services, or activity. Direct takedowns to <a href="mailto:jim@db8bot.app" className="underline decoration-dashed">jim@db8bot.app</a></span>
+            <span className='text-gray-400 text-lg'>Note: The organizations listed above represent a selection of groups that use db8bot. db8bot does not endorse or sponsor any of the above organizations or their products, services, or activity. Direct takedowns to <a href="mailto:jim@db8bot.app" className="underline decoration-dashed">jim@db8bot.app</a>.</span>
           </div>
         </div>
 
@@ -754,7 +754,7 @@ export default function Home() {
       {/* supporting organizations */}
       <div className='bg-black pt-10 pb-14 px-2'>
         <div className='text-center'>
-          <span className='text-white text-3xl'>Supporting Organizations</span>
+          <span className='text-white text-3xl'>Supporting & Sponsoring Organizations</span>
         </div>
         <div className='text-center'>
           <span className='text-gray-400 text-lg'>Thank you for supporting our mission to make learning accessible to all.</span>
