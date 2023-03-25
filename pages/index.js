@@ -609,17 +609,6 @@ export default function Home() {
                 </div>
               </a>
 
-              <a href="https://www.ddidebate.org/" target='_blank' className='m-auto'>
-                <div>
-                  <Image
-                    src='/logos/DDI_Debate.jpg'
-                    height='192'
-                    width='192'
-                    className='invert grayscale'
-                  />
-                </div>
-              </a>
-
               <a href="https://michigandebate.com/institutes/" target='_blank' className='m-auto'>
                 <div>
                   <Image
@@ -754,6 +743,9 @@ export default function Home() {
               </a>
 
             </div>
+          </div>
+          <div className='text-center pt-4'>
+            <span className='text-gray-400 text-lg'>Note: The organizations listed above represent a selection of groups that use db8bot. db8bot does not endorse or sponsor any of the above organizations or their products, services, or activity. </span>
           </div>
         </div>
 
