@@ -745,7 +745,7 @@ export default function Home() {
             </div>
           </div>
           <div className='text-center pt-4'>
-            <span className='text-gray-400 text-lg'>Note: The organizations listed above represent a selection of groups that use db8bot. db8bot does not endorse or sponsor any of the above organizations or their products, services, or activity. </span>
+            <span className='text-gray-400 text-lg'>Note: The organizations listed above represent a selection of groups that use db8bot. db8bot does not endorse or sponsor any of the above organizations or their products, services, or activity. Direct takedowns to <a href="mailto:jim@db8bot.app" className="underline decoration-dashed">jim@db8bot.app</a></span>
           </div>
         </div>
 
