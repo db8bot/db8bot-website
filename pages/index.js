@@ -414,7 +414,7 @@ export default function Home() {
 
               <div className='flex flex-col items-center justify-start'>
 
-                <div className='self-start text-center font-bold text-5xl'>
+                <div className='self-start text-center font-bold text-5xl pl-2'>
                   <span className='text-white'>Other tools to make online debate & learning </span>
                   <span className='bg-clip-text bg-gradient-to-r from-melon1 to-melon2 text-transparent'>easy</span>
                   <span className='text-white'>.</span>
@@ -422,7 +422,7 @@ export default function Home() {
 
                 <div className='flex flex-1 items-center justify-center md:pl-8 pt-6'>
                   <div className='md:p-4'>
-                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md md:h-[500px] md:w-[500px] w-[320px] h-[340px] lg:h-[600px] lg:w-[600px] xl:h-[700px] xl:w-[700px] 2xl:h-[750px] 2xl:w-[750px]'>
+                    <div className='grid grid-cols-2 grid-rows-2 text-white bg-gradient-to-br from-melon1/75 to-melon2/75  rounded-tl-md rounded-tr-md rounded-bl-md rounded-br-md md:h-[500px] md:w-[500px] w-[320px] h-[340px] lg:h-[350px] lg:w-[350px] xl:h-[400px] xl:w-[400px] min-[1400px]:w-[470px] min-[1400px]:h-[470px] 2xl:h-[550px] 2xl:w-[550px]'>
                       <div className='text-center items-center justify-center flex flex-col border-r border-b'>
                         <RiCharacterRecognitionLine
                           className='text-8xl md:text-9xl'
@@ -484,19 +484,19 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterOn(true)}>
               </ScrollTrigger>
               <p className='text-2xl md:text-3xl'>
-                {counterOn && <CountUp start={0} end={980} suffix='+' duration={2} delay={0} />}
+                {counterOn && <CountUp start={0} end={1010} suffix='+' duration={2} delay={0} />}
               </p>
               <p className='text-lg sm:text-2xl md:text-3xl'>Communities</p>
             </div>
             <div className='text-center'>
 
               <div className='font-bold text-2xl md:text-3xl'>
-                <p>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
+                <p>{counterOn && <CountUp start={0} end={372000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
                 <p>Active Users</p>
               </div>
               <div>
-                <p>{counterOn && <CountUp start={0} end={650000} suffix='+' separator=',' duration={2} delay={0} />}
+                <p>{counterOn && <CountUp start={0} end={670000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
                 <p>Cumulative Users</p>
               </div>
@@ -604,6 +604,17 @@ export default function Home() {
                     src='/logos/StMarks_Debate.png'
                     height='128'
                     width='128'
+                    className='invert grayscale'
+                  />
+                </div>
+              </a>
+
+              <a href="https://gbs.glenbrook225.org/" target='_blank' className='m-auto'>
+                <div>
+                  <Image
+                    src='/logos/GBS_Debate.png'
+                    height='256'
+                    width='256'
                     className='invert grayscale'
                   />
                 </div>
