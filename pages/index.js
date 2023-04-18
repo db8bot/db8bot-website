@@ -763,7 +763,7 @@ export default function Home() {
       </div>
 
       {/* supporting organizations */}
-      <div className='bg-black pt-10 pb-14 px-2'>
+      <div className='bg-black pt-10 pb-14 px-2 md:px-0'>
         <div className='text-center'>
           <span className='text-white text-3xl'>Supporting & Sponsoring Organizations</span>
         </div>
@@ -771,17 +771,27 @@ export default function Home() {
           <span className='text-gray-400 text-lg'>Thank you for supporting our mission to make learning accessible to all.</span>
           {/* We could not have done it without you. */}
         </div>
-        <div className='pt-4'>
-          <a href="https://opencollective.com/db8bot" target='_blank'>
-            <div>
-              <Image
-                src='/sponsors/OSC.png'
-                height='189'
-                width='750'
-                className='m-auto'
-              />
+        <div className='pt-4 px-2 md:px-0'>
+          <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-cols-1 grid-rows-2 px-10 md:px-0'>
+            <div className='w-[563px] h-[142px] m-auto'>
+              <a href="https://opencollective.com/db8bot" target='_blank'>
+                <Image
+                  src='/sponsors/OSC.png'
+                  height='142'
+                  width='563'
+                />
+              </a>
             </div>
-          </a>
+            <div className='w-[392px] h-[85px] m-auto'>
+              <a href='https://www.fossa.com/?utm_source=FOSSA&utm_medium=db8bot' target='_blank'>
+                <Image
+                  src='/sponsors/FOSSA.svg'
+                  height='85'
+                  width='392'
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
