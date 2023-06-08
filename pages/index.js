@@ -133,7 +133,7 @@ export default function Home() {
                 <span className='text-gray-400'> than an academic database.</span>
               </div>
             </div>
-            {/* "the ultimateresearch assistant | incresing access while being faster than academic databases" */}
+            {/* "the ultimateresearch assistant | increasing access while being faster than academic databases" */}
             <div className='backdrop-opacity-10 backdrop-invert rounded-lg'>
               {/* inner container */}
               <div className='py-14 pl-14 flex'>
@@ -484,14 +484,14 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterOn(true)}>
               </ScrollTrigger>
               <p className='text-2xl md:text-3xl'>
-                {counterOn && <CountUp start={0} end={1010} suffix='+' duration={2} delay={0} />}
+                {counterOn && <CountUp start={0} end={1110} suffix='+' duration={2} delay={0} />}
               </p>
               <p className='text-lg sm:text-2xl md:text-3xl'>Communities</p>
             </div>
             <div className='text-center'>
 
               <div className='font-bold text-2xl md:text-3xl'>
-                <p>{counterOn && <CountUp start={0} end={372000} suffix='+' separator=',' duration={2} delay={0} />}
+                <p>{counterOn && <CountUp start={0} end={325000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
                 <p>Active Users</p>
               </div>
@@ -773,7 +773,7 @@ export default function Home() {
         </div>
         <div className='pt-4 px-2 md:px-0'>
           <div className='grid lg:grid-cols-2 lg:grid-rows-1 grid-cols-1 grid-rows-2 px-10 md:px-0'>
-            <div className='w-[563px] h-[142px] m-auto'>
+            <div className='m-auto'>
               <a href="https://opencollective.com/db8bot" target='_blank'>
                 <Image
                   src='/sponsors/OSC.png'
@@ -782,7 +782,7 @@ export default function Home() {
                 />
               </a>
             </div>
-            <div className='w-[392px] h-[85px] m-auto'>
+            <div className='m-auto'>
               <a href='https://www.fossa.com/?utm_source=FOSSA&utm_medium=db8bot' target='_blank'>
                 <Image
                   src='/sponsors/FOSSA.svg'
