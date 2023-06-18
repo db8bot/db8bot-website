@@ -792,6 +792,17 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <div className='grid lg:grid-cols-1 lg:grid-rows-1 grid-cols-1 grid-rows-1 px-10 md:px-0'>
+            <div className='m-auto'>
+              <a href='https://vercel.com/?utm_source=db8bot&utm_campaign=oss' target='_blank'>
+                <Image
+                  src='/sponsors/vercel.svg'
+                  height='2219'
+                  width='500'
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
