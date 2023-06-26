@@ -484,7 +484,7 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterOn(true)}>
               </ScrollTrigger>
               <p className='text-2xl md:text-3xl'>
-                {counterOn && <CountUp start={0} end={1110} suffix='+' duration={2} delay={0} />}
+                {counterOn && <CountUp start={0} end={1130} suffix='+' duration={2} delay={0} />}
               </p>
               <p className='text-lg sm:text-2xl md:text-3xl'>Communities</p>
             </div>
