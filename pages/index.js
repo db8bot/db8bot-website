@@ -255,7 +255,7 @@ export default function Home() {
                         <div>
                           <span className='text-unicorn1 text-3xl'>/</span>
                           <span className='text-white text-2xl'>follow</span>
-                          <span className='text-orangewheel text-xl'> (coming soon!)</span>
+                          {/* <span className='text-orangewheel text-xl'> (coming soon!)</span> */}
                         </div>
                       </div>
 
@@ -289,7 +289,7 @@ export default function Home() {
                           <span>📣 </span>
                           <span className='font-bold'>Receive</span>
                           <span> live pairing notifications ("Tabroom Blasts") in Discord for any team active in a tournament.</span>
-                          <span className='text-orangewheel font-bold'> (coming soon!)</span>
+                          {/* <span className='text-orangewheel font-bold'> (coming soon!)</span> */}
                         </div>
                       </div>
 
@@ -484,7 +484,7 @@ export default function Home() {
               <ScrollTrigger onEnter={() => setCounterOn(true)}>
               </ScrollTrigger>
               <p className='text-2xl md:text-3xl'>
-                {counterOn && <CountUp start={0} end={1180} suffix='+' duration={2} delay={0} />}
+                {counterOn && <CountUp start={0} end={1200} suffix='+' duration={2} delay={0} />}
               </p>
               <p className='text-lg sm:text-2xl md:text-3xl'>Communities</p>
             </div>
