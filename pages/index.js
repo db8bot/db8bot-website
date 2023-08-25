@@ -491,12 +491,12 @@ export default function Home() {
             <div className='text-center'>
 
               <div className='font-bold text-2xl md:text-3xl'>
-                <p>{counterOn && <CountUp start={0} end={360000} suffix='+' separator=',' duration={2} delay={0} />}
+                <p>{counterOn && <CountUp start={0} end={370000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
                 <p>Active Users</p>
               </div>
               <div>
-                <p>{counterOn && <CountUp start={0} end={670000} suffix='+' separator=',' duration={2} delay={0} />}
+                <p>{counterOn && <CountUp start={0} end={680000} suffix='+' separator=',' duration={2} delay={0} />}
                 </p>
                 <p>Cumulative Users</p>
               </div>
