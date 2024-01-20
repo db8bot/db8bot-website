@@ -854,7 +854,7 @@ export default function Home() {
 
         <div className='text-center text-white'>
           <p>
-            &copy; 2023 db8bot
+            &copy; 2024 db8bot
           </p>
           <p>
             The db8bot project is open-sourced under the MIT license on <a href="https://github.com/db8bot" target='_blank' className='underline decoration-dashed decoration-white'>GitHub</a>.
